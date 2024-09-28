@@ -1,6 +1,6 @@
 "use client"
 import React from 'react'
-import { Check, ChevronDown, Dot, Instagram, Mail, Menu, Phone, Search, ShoppingCart } from "lucide-react";
+import { Check, ChevronDown, Dot, Instagram, Mail, Menu, Phone} from "lucide-react";
 import Image from "next/image";
 import Logo from "../../assets/Unidotaciones_Logo2.svg"
 import {
@@ -17,8 +17,7 @@ import {
     PopoverTrigger,
 } from "@/components/ui/popover"
 import { cn } from '@/lib/utils';
-import { Button } from '@/components/ui/button';
-import { useParams, useRouter } from 'next/navigation';
+import { useRouter } from 'next/navigation';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Separator } from '@/components/ui/separator';
 import Link from 'next/link';
@@ -26,7 +25,6 @@ import { categorias, categoriasProduct } from '@/src/models';
 
 const Nav = () => {
     const roter = useRouter()
-    const { id } = useParams()
     const [open, setOpen] = React.useState(false)
     const [value, setValue] = React.useState("")
     const [isOpen, setIsOpen] = React.useState(false);
@@ -79,22 +77,22 @@ const Nav = () => {
                     <div className="2xl:w-[90rem] xl:w-[75rem] w-auto mx-auto flex flex-col sm:flex-row items-center justify-center sm:justify-between gap-2">
                         <div className="flex flex-col sm:flex-row items-center sm:gap-7 gap-3" >
                             <div className="flex items-center gap-2">
-                                <Phone size={16}/>
-                                <p>0000000000</p>
+                                <Phone size={16} strokeWidth={1.6}/>
+                                <p className='text-sm font-extralight'>0000000000</p>
                             </div>
                             <div className="flex items-center gap-2" >
-                                <Mail size={16}/>
-                                <p>correodeeelos@gmail.com</p>
+                                <Mail size={16} strokeWidth={1.6}/>
+                                <p className='text-sm font-extralight'>correodeeelos@gmail.com</p>
                             </div>
                         </div>
                         <div>
-                            <h3 className="font-semibold text-center">Síguenos y no te pierdas la oportunidad de ganar descuentos</h3>
+                            <h3 className="font-extralight text-sm text-center">Síguenos y no te pierdas la oportunidad de ganar descuentos</h3>
                         </div>
                         <div className="flex items-center gap-6" >
-                            <p>Síguenos:</p>
+                            <p className='text-sm font-extralight'>Síguenos:</p>
                             <a href="https://www.instagram.com/unidotacionesdelcaribe/" target='_blank' className="flex items-center gap-2" >
-                                <Instagram size={16}/>
-                                <p>unidotacionesdelcaribe</p>
+                                <Instagram size={16} strokeWidth={1.6}/>
+                                <p className='text-sm font-extralight'>unidotacionesdelcaribe</p>
                             </a>
                         </div>
                     </div>

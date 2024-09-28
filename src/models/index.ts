@@ -42,3 +42,19 @@ export const categoriasProduct: string[] = [
     "Categoria 3",
     "Categoria 4",
 ]
+
+export const Category: categoriasType[] = [
+    {
+        value: "Categoria 1",
+        label: "Categoria 1",
+    },
+    {
+        value: "Categoria 2",
+        label: "Categoria 2",
+    },
+    {
+        value: "Categoria 3",
+        label: "Categoria 3",
+    },
+   
+]
