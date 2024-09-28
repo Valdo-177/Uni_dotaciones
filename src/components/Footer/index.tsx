@@ -14,17 +14,10 @@ const Footer = () => {
             ))}
           </div>
         </div>
-        <div>
-          <h4 className='font-[600] w-full text-start text-black cursor-pointer'>Horarios</h4>
-          <div className='py-1 grid sm:grid-cols-2 grid-cols-1 w-full sm:w-[30rem]'>
-            {Category.map((item, index) => (
-              <Link className='text-sm' href={`/Category/${item.label}`} key={index}>{item.label}</Link>
-            ))}
-          </div>
-        </div>
+      
       </div>
       <div className="2xl:w-[90rem] xl:w-full w-auto mx-auto border-t border-gray-100 py-3 flex items-center justify-center">
-        <h4 className='text-sm font-[600] w-full text-gray-700 cursor-pointer text-center'>© 2024 UNIDOTACIONES DELCARIBE S.A.S. | Todos los derechos reservados</h4>
+        <h4 className='text-xs sm:text-sm font-[600] w-full text-gray-700 cursor-pointer text-center'>© 2024 UNIDOTACIONES DELCARIBE S.A.S. | Todos los derechos reservados</h4>
 
       </div>
     </section>
