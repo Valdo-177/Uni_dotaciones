@@ -15,22 +15,23 @@ const HomePages = () => {
               + 4 Años de Experiencia
             </span>
             <div className="w-full">
-              <h1 className="text-primaryColor text-3xl sm:text-5xl uppercase font-medium">
-                Unidotaciones <br /> del caribe
+              <h1 className="text-[#18533d] font-bold text-3xl sm:text-5xl uppercase ">
+               <span className="text-[#C5A963]">Somos tu </span>proveedor  de confianza
               </h1>
-              <h2 className="text-2xl">Somos tu proveedor de confianza</h2>
+              {/* <h2 className="text-2xl">Somos tu proveedor de confianza</h2> */}
             </div>
-            <p className="sm:w-[24rem] font-extralight text-sm">
-              Somos tu proveedor de confianza Somos tu proveedor de
-              confianzaSomos tu proveedor de{" "}
+            <p className="sm:w-[24rem] font-medium text-lg py-2 text-gray-500 ">
+              Más 4 años de experiencia en la comercialización de suministros y
+              dotación empresarial tales como uniformes, calzado y epps.
             </p>
-            <Button className="bg-primaryColor hover:bg-primaryColorBlack">
+            {/* <Button className="bg-[#C5A963] text-[#18533d] hover:bg-[#18533d] rounded-2xl p-4">
               Contáctanos
-            </Button>
+            </Button> */}
+            <Button className="text-[#18533d] hover:before:bg-redborder-red-500 relative h-[50px] w-40 overflow-hidden border border-[#C5A963] bg-[#C5A963] px-3  shadow-2xl transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-[#18533d] before:transition-all before:duration-500 hover:text-white hover:shadow-[#18533d] hover:before:left-0 hover:before:w-full rounded-3xl text-lg"><span className="relative z-10"> Contáctanos</span></Button>
           </div>
         </div>
       </section>
-      <section className="bg-primaryColor text-black">
+      <section className="bg-[#18533d] text-black">
         <div className="xl:w-[75rem] w-auto mx-auto gap-4 p-5 sm:p-0 sm:h-[8rem] grid grid-cols-1 sm:grid-cols-3 items-center justify-between">
           {itemBeneficios.map((item, index) => (
             <CardDescription item={item} key={index} />
@@ -47,15 +48,13 @@ const HomePages = () => {
         />
         <div className="xl:w-[75rem] w-full mx-auto p-4 py-6 h-[22rem] flex flex-col sm:flex-row items-center justify-between absolute top-0 text-white">
           <div>
-            <h3>NUESTRA VISIÓN</h3>
+            <h3>NUESTRA MISIÓN</h3>
             <p className="font-extralight sm:w-[30rem]">
-              Ser reconocida a mediano plazo, como una empresa de alta calidad y
-              cumplimiento en el sector de dotaciones empresariales en la Región
-              Caribe.
+            Ser la empresa líder en comercialización de dotaciones empresariales, brindando un servicio confiable y de calidad, logrando la satisfacción de clientes, proveedores y accionistas.
             </p>
           </div>
           <div>
-            <h3>NUESTRA VISIÓN</h3>Conéctate con nosotros:
+            <h3>NUESTRA VISIÓN</h3>
             <p className="font-extralight sm:w-[30rem]">
               Ser reconocida a mediano plazo, como una empresa de alta calidad y
               cumplimiento en el sector de dotaciones empresariales en la Región
@@ -66,15 +65,22 @@ const HomePages = () => {
       </section>
 
       <section className=" text-black ">
-        <div className="xl:w-[75rem] w-auto mx-auto gap-4 p-5 sm:p-0 my-8 flex flex-col  items-center justify-center">
-          <h2 className="text-primaryColor text-xl font-medium">
-            Nuestros productos
-          </h2>
+        <div className="xl:w-[54rem] w-auto mx-auto gap-4 p-5 sm:p-0 my-8 flex flex-col items-center justify-center">
+        <h3 className='text-[#18533d] uppercase text-2xl font-bold'>Nuestros productos</h3>
 
-          <div className="grid grid-cols-1 sm:grid-cols-4 items-center justify-center w-full text-center gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-3 items-center justify-between  gap-12">
             {CategoryCard.map((item, index) => (
-              <div key={index} className="px-8 cursor-pointer flex gap-2 items-center justify-center flex-col">
-                <Image src={fondoSection} alt={item.title} width={600} height={600} />
+              <div
+                key={index}
+                className="px-8 border-4 h-64 rounded-2xl w-64 border-[#18533d] cursor-pointer flex gap-2 items-center justify-center flex-col"
+              >
+                
+                {/* <Image
+                  src={fondoSection}
+                  alt={item.title}
+                  width={600}
+                  height={600}
+                /> */}
 
                 <h3 className=" text-sm">{item.title}</h3>
               </div>

@@ -85,17 +85,17 @@ const Nav = () => {
 
   return (
     <>
-      <header className="bg-primaryColor text-white">
+      <header className="bg-[#18533d] text-white">
         <section className="hidden sm:block px-5 sm:px-10 py-2">
           <div className="2xl:w-[90rem] xl:w-[75rem] w-auto mx-auto flex flex-col sm:flex-row items-center justify-center sm:justify-between gap-2">
             <div className="flex flex-col sm:flex-row items-center sm:gap-7 gap-3">
               <div className="flex items-center gap-2">
-                <Phone size={20} />
-                <p>0000000000</p>
+                <Phone color="#C5A963" size={20} />
+                <p>3225875128</p>
               </div>
               <div className="flex items-center gap-2">
-                <Mail size={20} />
-                <p>correodeeelos@gmail.com</p>
+                <Mail color="#C5A963" size={20} />
+                <p>unidotaciobesdelcaribe@gmail.com</p>
               </div>
             </div>
 
@@ -106,7 +106,7 @@ const Nav = () => {
                 target="_blank"
                 className="flex items-center gap-2"
               >
-                <Instagram size={20} />
+                <Instagram color="#C5A963" size={20} />
                 <p>unidotacionesdelcaribe</p>
               </a>
             </div>
@@ -116,21 +116,21 @@ const Nav = () => {
           <div className="2xl:w-[90rem] xl:w-[75rem] w-auto mx-auto flex items-center justify-between">
             <Image
               src={Logo}
-              width={190}
-              height={190}
+              width={250}
+              height={250}
               alt="Logo de naturchem"
               onClick={() => roter.push("/")}
             />
-            <div className="hidden sm:flex items-center gap-5 text-fondo">
-              <Link href="#" className="hover:underline">
+            <div className="hidden sm:flex items-center font-bold gap-10 text-lg">
+              <Link href="#" className="text-[#18533d] hover:text-[#C5A963]">
                 Inicio
               </Link>
-              <Link href="#" className="hover:underline">
-                Contáctanos
+              <Link href="#" className="text-[#18533d] hover:text-[#C5A963]">
+                Cotizaciones
               </Link>
               <Popover open={open} onOpenChange={setOpen}>
                 <PopoverTrigger asChild>
-                  <div className="flex items-center gap-1 cursor-pointer hover:underline">
+                  <div className="flex items-center gap-1 cursor-pointer text-[#18533d] hover:text-[#C5A963]">
                     <p>Categorías</p>
                     <ChevronDown size={16} />
                   </div>

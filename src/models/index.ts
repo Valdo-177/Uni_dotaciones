@@ -31,10 +31,6 @@ export const categorias: categoriasType[] = [
         label: "uniformes industriales",
     },
     {
-        value: "calzado industrial",
-        label: "calzado industrial",
-    },
-    {
         value: "otros",
         label: "otros",
     },
@@ -43,7 +39,6 @@ export const categorias: categoriasType[] = [
 export const categoriasProduct: string[] = [
     "uniformes empresariales",
     "uniformes industriales",
-    "calzado industrial",
     "otros",
 ]
 
@@ -55,10 +50,6 @@ export const Category: categoriasType[] = [
     {
         value: "uniformes industriales",
         label: "uniformes industriales",
-    },
-    {
-        value: "calzado industrial",
-        label: "calzado industrial",
     },
     {
         value: "otros",
@@ -75,10 +66,6 @@ export const CategoryCard: categoryCardType[] = [
     {
         img: "Uniformes Industriales",
         title: "Uniformes Industriales",
-    },
-    {
-        img: "Calzado Industrial",
-        title: "Calzado Industrial",
     },
     {
         img: "Otros",
