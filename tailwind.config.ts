@@ -11,7 +11,7 @@ const config: Config = {
   theme: {
   	extend: {
   		colors: {
-			primaryColor: "#00B207",
+			primaryColor: "#1B6392",
 			// primaryColor: "#18533d",
 			primaryColorBlack: "#5e951f",
   			background: 'hsl(var(--background))',
