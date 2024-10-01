@@ -4,7 +4,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <section className="bg-[#18533d] text-white px-2 py-3 sm:px-10 flex flex-col items-center justify-center">
+    <section className="bg-primaryColor text-white px-2 py-3 sm:px-10 flex flex-col items-center justify-center">
       <div className="w-auto mx-auto p-5 flex flex-col items-center gap-2 justify-center">
         {/* <div className="flex flex-col items-center">
           <h4 className="font-[600] cursor-pointer">
