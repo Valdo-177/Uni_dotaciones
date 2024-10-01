@@ -8,3 +8,8 @@ export interface categoriasType {
     value: string;
     label: string;
 }
+
+export interface categoryCardType {
+    img: string;
+    title: string;
+}

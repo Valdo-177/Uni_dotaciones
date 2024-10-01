@@ -1,60 +1,74 @@
 import img1 from "../assets/g9.svg"
 import img2 from "../assets/path25.svg"
 import img3 from "../assets/path17.svg"
-import { categoriasType, TypesBeneficios } from "./models.types"
+import { categoriasType, categoryCardType, TypesBeneficios } from "./models.types"
 
 export const itemBeneficios: TypesBeneficios[] =[
     {
-        label: "Atencion de calidad ",
+        label: "Atencion de calidad",
         description: "Asesores que te ayudaran a resolver tus dudas",
         img: img1.src
     },
     {
-        label: "Atencion de calidad ",
-        description: "Asesores que te ayudaran a resolver tus dudas",
+        label: "Tiempo de Entrega ",
+        description: "Nos ajustamos a tu tiempo, según el tamaño de tu orden",
         img: img2.src
     },
     {
-        label: "Atencion de calidad ",
-        description: "Asesores que te ayudaran a resolver tus dudas",
+        label: "Excelente Calidad ",
+        description: "Nuestros productos estan elaborados con los mejores estandares de calidad",
         img: img3.src
     },
 ]
 
 export const categorias: categoriasType[] = [
     {
-        value: "Categoria 1",
-        label: "Categoria 1",
+        value: "uniformes empresariales",
+        label: "uniformes empresariales",
     },
     {
-        value: "Categoria 2",
-        label: "Categoria 2",
+        value: "uniformes industriales",
+        label: "uniformes industriales",
     },
     {
-        value: "Categoria 3",
-        label: "Categoria 3",
+        value: "otros",
+        label: "otros",
     },
 ]
 
 export const categoriasProduct: string[] = [
-    "Categoria 1",
-    "Categoria 2",
-    "Categoria 3",
-    "Categoria 4",
+    "uniformes empresariales",
+    "uniformes industriales",
+    "otros",
 ]
 
 export const Category: categoriasType[] = [
     {
-        value: "Categoria 1",
-        label: "Categoria 1",
+        value: "uniformes empresariales",
+        label: "uniformes empresariales",
     },
     {
-        value: "Categoria 2",
-        label: "Categoria 2",
+        value: "uniformes industriales",
+        label: "uniformes industriales",
     },
     {
-        value: "Categoria 3",
-        label: "Categoria 3",
+        value: "otros",
+        label: "otros",
     },
    
+]
+
+export const CategoryCard: categoryCardType[] = [
+    {
+        img: "Uniformes Empresariales",
+        title: "Uniformes Empresariales",
+    },
+    {
+        img: "Uniformes Industriales",
+        title: "Uniformes Industriales",
+    },
+    {
+        img: "Otros",
+        title: "Otros",
+    },
 ]
