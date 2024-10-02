@@ -23,7 +23,7 @@ const Footer = () => {
           </div>
         </div> */}
         <div className=" flex flex-col items-center">
-          <h3 className="text-[#C5A963] font-bold">Contáctanos</h3>
+          <h3 className="font-bold">Contáctanos</h3>
 
           <div className="text-gray-400 flex flex-col items-center ">
             <p>3225875128</p>

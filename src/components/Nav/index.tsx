@@ -122,15 +122,15 @@ const Nav = () => {
               onClick={() => roter.push("/")}
             />
             <div className="hidden sm:flex items-center font-bold gap-10 text-lg">
-              <Link href="#" className="text-primaryColor hover:text-[#C5A963]">
+              <Link href="#" className="text-primaryColor hover:underline">
                 Inicio
               </Link>
-              <Link href="#" className="text-primaryColor hover:text-[#C5A963]">
+              <Link href="#" className="text-primaryColor hover:underline">
                 Cotizaciones
               </Link>
               <Popover open={open} onOpenChange={setOpen}>
                 <PopoverTrigger asChild>
-                  <div className="flex items-center gap-1 cursor-pointer text-primaryColor hover:text-[#C5A963]">
+                  <div className="flex items-center gap-1 cursor-pointer text-primaryColor hover:underline">
                     <p>Categorías</p>
                     <ChevronDown size={16} />
                   </div>

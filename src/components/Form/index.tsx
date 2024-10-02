@@ -50,7 +50,7 @@ const Form = () => {
           </div>
         </form>
         {/* <Button onClick={() => ShowLoading(true)} className='bg-primaryColor hover:bg-primaryColorBlack'>Enviar </Button> */}
-        <Button className="text-primaryColor font-bold uppercase text-lg hover:before:bg-redborder-red-500 relative h-[50px] w-40 overflow-hidden border border-[#C5A963] bg-[#C5A963] px-3  shadow-2xl transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-primaryColor before:transition-all before:duration-500 hover:text-white hover:shadow-primaryColor hover:before:left-0 hover:before:w-full rounded-3xl"><span className="relative z-10"> Enviar</span></Button>
+        <Button className="hover:before:bg-redborder-red-500 relative h-[45px] w-40 overflow-hidden border border-[#191919] bg-[#191919] px-3  shadow-2xl transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-primaryColor before:transition-all before:duration-500 hover:text-white hover:shadow-primaryColor hover:border-primaryColor hover:before:left-0 hover:before:w-full rounded-3xl text-lg"><span className="relative z-10"> Enviar</span></Button>
       </div>
     </section>
   )

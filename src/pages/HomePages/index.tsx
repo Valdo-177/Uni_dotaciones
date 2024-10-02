@@ -16,14 +16,14 @@ const HomePages = () => {
             </span>
             <div className="w-full">
               <h1 className="text-primaryColor font-bold text-3xl sm:text-5xl uppercase ">
-               <span className="text-[#191919]">Somos tu </span>proveedor  de confianza
+                <span className="text-[#191919]">Somos tu </span>proveedor  de confianza
               </h1>
             </div>
             <p className="sm:w-[24rem] font-medium text-lg py-2 text-gray-500 ">
               Más 4 años de experiencia en la comercialización de suministros y
               dotación empresarial tales como uniformes, calzado y epps.
             </p>
-            <Button className="hover:before:bg-redborder-red-500 relative h-[50px] w-40 overflow-hidden border border-[#191919] bg-[#191919] px-3  shadow-2xl transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-primaryColor before:transition-all before:duration-500 hover:text-white hover:shadow-primaryColor hover:border-primaryColor hover:before:left-0 hover:before:w-full rounded-3xl text-lg"><span className="relative z-10"> Contáctanos</span></Button>
+            <Button className="hover:before:bg-redborder-red-500 relative h-[45px] w-40 overflow-hidden border border-[#191919] bg-[#191919] px-3  shadow-2xl transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-primaryColor before:transition-all before:duration-500 hover:text-white hover:shadow-primaryColor hover:border-primaryColor hover:before:left-0 hover:before:w-full rounded-3xl text-lg"><span className="relative z-10"> Contáctanos</span></Button>
           </div>
         </div>
       </section>
@@ -46,7 +46,7 @@ const HomePages = () => {
           <div>
             <h3>NUESTRA MISIÓN</h3>
             <p className="font-extralight sm:w-[30rem]">
-            Ser la empresa líder en comercialización de dotaciones empresariales, brindando un servicio confiable y de calidad, logrando la satisfacción de clientes, proveedores y accionistas.
+              Ser la empresa líder en comercialización de dotaciones empresariales, brindando un servicio confiable y de calidad, logrando la satisfacción de clientes, proveedores y accionistas.
             </p>
           </div>
           <div>
@@ -61,23 +61,15 @@ const HomePages = () => {
       </section>
 
       <section className=" text-black ">
-        <div className="xl:w-[54rem] w-auto mx-auto gap-4 p-5 sm:p-0 my-8 flex flex-col items-center justify-center">
-        <h3 className='text-primaryColor uppercase text-2xl font-bold'>Nuestros productos</h3>
+        <div className="xl:w-[80rem] w-auto mx-auto gap-4 p-5 sm:p-0 my-8 flex flex-col items-center justify-center">
+          <h3 className='text-primaryColor uppercase text-2xl font-bold'>Nuestros productos</h3>
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 items-center justify-between  gap-12">
+          <div className="grid grid-cols-1 sm:grid-cols-3 bg-red-200 items-center justify-between  gap-9">
             {CategoryCard.map((item, index) => (
               <div
                 key={index}
-                className="px-8 border-4 h-64 rounded-2xl w-64 border-primaryColor cursor-pointer flex gap-2 items-center justify-center flex-col"
+                className="px-8 h-64 w-[25rem] border border-primaryColor cursor-pointer flex gap-2 items-center justify-center flex-col"
               >
-                
-                {/* <Image
-                  src={fondoSection}
-                  alt={item.title}
-                  width={600}
-                  height={600}
-                /> */}
-
                 <h3 className=" text-sm">{item.title}</h3>
               </div>
             ))}
