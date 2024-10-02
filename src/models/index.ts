@@ -14,7 +14,7 @@ export const itemBeneficios: TypesBeneficios[] =[
         img: img1.src
     },
     {
-        label: "Confiabilidad de la Entrega ",
+        label: "Confiabilidad en la Entrega ",
         description: "Nos ajustamos a tu tiempo, según el tamaño de tu orden.",
         img: img2.src
     },

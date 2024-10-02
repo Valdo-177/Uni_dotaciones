@@ -12,9 +12,9 @@ const HomePages = () => {
       <section className="bg-[#F8F8F8] text-black p-8 sm:p-4">
         <div className="xl:w-[75rem] w-auto mx-auto h-[30rem] flex items-center justify-between">
           <div className="flex flex-col items-center gap-2 w-full sm:items-start">
-            {/* <span className="font-extralight text-start w-full text-sm text-[#b61c1c">
+            <span className="font-extralight text-start w-full text-sm text-[#b61c1c">
               + 4 Años de Experiencia
-            </span> */}
+            </span>
             <div className="w-full sm:space-y-1 text-3xl text-center sm:text-start">
               <h1 className="font-bold text-primaryColor sm:text-5xl  ">
                 Somos tu
