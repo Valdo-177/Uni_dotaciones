@@ -3,57 +3,61 @@ import img2 from "../assets/path25.svg"
 import img3 from "../assets/path17.svg"
 import { categoriasType, categoryCardType, TypesBeneficios } from "./models.types"
 
+export const globalStyles = {
+    container : "xl:w-[75rem] w-auto mx-auto"
+}
+
 export const itemBeneficios: TypesBeneficios[] =[
     {
-        label: "Atencion de calidad",
-        description: "Asesores que te ayudaran a resolver tus dudas",
+        label: "Atención Personalizada",
+        description: "Asesores que te ayudarán a escoger el producto de acuerdo a la necesidad de tu empresa.",
         img: img1.src
     },
     {
-        label: "Tiempo de Entrega ",
-        description: "Nos ajustamos a tu tiempo, según el tamaño de tu orden",
+        label: "Confiabilidad de la Entrega ",
+        description: "Nos ajustamos a tu tiempo, según el tamaño de tu orden.",
         img: img2.src
     },
     {
         label: "Excelente Calidad ",
-        description: "Nuestros productos estan elaborados con los mejores estandares de calidad",
+        description: "Nuestros productos estan elaborados con los mejores estandares de calidad.",
         img: img3.src
     },
 ]
 
 export const categorias: categoriasType[] = [
     {
-        value: "uniformes empresariales",
-        label: "uniformes empresariales",
+        value: "Uniformes empresariales",
+        label: "Uniformes empresariales",
     },
     {
-        value: "uniformes industriales",
-        label: "uniformes industriales",
+        value: "Uniformes industriales",
+        label: "Uniformes industriales",
     },
     {
-        value: "otros",
-        label: "otros",
+        value: "Otros",
+        label: "Otros",
     },
 ]
 
 export const categoriasProduct: string[] = [
-    "uniformes empresariales",
-    "uniformes industriales",
-    "otros",
+    "Uniformes empresariales",
+    "Uniformes industriales",
+    "Otros",
 ]
 
 export const Category: categoriasType[] = [
     {
-        value: "uniformes empresariales",
-        label: "uniformes empresariales",
+        value: "Uniformes empresariales",
+        label: "Uniformes empresariales",
     },
     {
-        value: "uniformes industriales",
-        label: "uniformes industriales",
+        value: "Uniformes industriales",
+        label: "Uniformes industriales",
     },
     {
-        value: "otros",
-        label: "otros",
+        value: "Otros",
+        label: "Otros",
     },
    
 ]

@@ -23,11 +23,11 @@ export default function RootLayout({
   return (
     <html lang="es">
       <body
-        className={inter.className}
+        className={`bg-[#F8F8F8] ${inter.className}`}
       >
         <Nav/>
         {children}
-        <Form/>
+        {/* <Form/> */}
         <Footer/>
       </body>
     </html>

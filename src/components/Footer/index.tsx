@@ -1,11 +1,15 @@
 import { Category } from "@/src/models";
 import Link from "next/link";
 import React from "react";
+import Form from "../Form";
 
 const Footer = () => {
   return (
-    <section className="bg-primaryColor text-white px-2 py-3 sm:px-10 flex flex-col items-center justify-center">
-      <div className="w-auto mx-auto p-5 flex flex-col items-center gap-2 justify-center">
+    <section className="bg-primaryColor rounded-t-[40px] text-white  flex flex-col items-center justify-center">
+
+      <Form/>
+
+      <div className="w-auto mt-8 mx-auto p-5 flex flex-col items-center gap-2 justify-center sm:px-10">
         {/* <div className="flex flex-col items-center">
           <h4 className="font-[600] cursor-pointer">
             Categorias
@@ -23,11 +27,21 @@ const Footer = () => {
           </div>
         </div> */}
         <div className=" flex flex-col items-center">
-          <h3 className="text-[#C5A963] font-bold">Contáctanos</h3>
+          <h3 className="text-white font-bold">Contáctanos</h3>
 
           <div className="text-gray-400 flex flex-col items-center ">
+            <Link
+            href={'tel:3225875128'}
+            >
             <p>3225875128</p>
-            <p>unidotaciobesdelcaribe@gmail.com</p>
+            </Link>
+
+            <Link
+            href={'mailto:unidotacionesdelcaribe@gmail.com'}
+            >
+            
+            <p>unidotacionesdelcaribe@gmail.com</p>
+            </Link>
 
             <p>Barranquilla -  Colombia</p>
           </div>
