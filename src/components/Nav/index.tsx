@@ -3,13 +3,10 @@ import React from "react";
 import {
   Check,
   ChevronDown,
-  Dot,
   Instagram,
   Mail,
   Menu,
   Phone,
-  Search,
-  ShoppingCart,
 } from "lucide-react";
 import Image from "next/image";
 import Logo from "../../assets/Unidotaciones_Logo2.svg";
@@ -17,7 +14,6 @@ import {
   Command,
   CommandEmpty,
   CommandGroup,
-  CommandInput,
   CommandItem,
   CommandList,
 } from "@/components/ui/command";
@@ -27,7 +23,6 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover";
 import { cn } from "@/lib/utils";
-import { Button } from "@/components/ui/button";
 import { useParams, useRouter } from "next/navigation";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Separator } from "@/components/ui/separator";
@@ -36,6 +31,7 @@ import { categorias, categoriasProduct } from "@/src/models";
 
 const Nav = () => {
   const roter = useRouter();
+  // @ts-expect-error TS2614: Property 'Precios' is missing in type 'Product'.
   const { id } = useParams();
   const [open, setOpen] = React.useState(false);
   const [value, setValue] = React.useState("");
@@ -53,32 +49,23 @@ const Nav = () => {
     return (
       <div className="flex flex-col justify-between h-full">
         <div>
-          <div className="p-4 mt-6">
-           <div className="py-5">
-            <Link
-            onClick={() => handleOpenChange(false)}
-            className="text-primaryColor w-full hover:text-yellow-600 font-bold uppercase"
-            href={'/'}>
-            Inicio
-            </Link>
-           </div>
-
-            <p className="text-primaryColor mb-2 font-bold border-b-2 border-primaryColor">
+          <div className="p-4 mt-12">
+            <p className="text-primaryColor mb-2 font-bold">
               NUESTROS PRODUCTOS
             </p>
+            <Separator className="bg-[#1b639257]" />
             {categoriasProduct.map((item) => (
               <div onClick={() => handleOpenChange(false)} key={item}>
                 <Link
                   href={`/${item}`}
                   className={cn(
-                    `flex gap-x-2 mt-2 uppercase border-b-2 border-gray-400 text-black text-sm items-center p-2 py-4 cursor-pointer hover:bg-[#1b629253] hover:scale-105 transition-all delay-200 ${
-                      desencriptarCadena(id) == item && "bg-slate-300/20"
+                    `flex mt-2 uppercase text-black text-sm items-center p-2 cursor-pointer hover:bg-[#1b63921a] hover:scale-105 transition-all delay-200 ${desencriptarCadena(id) == item && "bg-slate-300/20"
                     }`
                   )}
                 >
-                  {/* <Dot className="h-5 w-5" strokeWidth={1} /> */}
                   {item}
                 </Link>
+                <Separator className="bg-[#1b639257]" />
               </div>
             ))}
           </div>
@@ -106,13 +93,13 @@ const Nav = () => {
           <div className="2xl:w-[90rem] xl:w-[75rem] w-auto mx-auto flex flex-col sm:flex-row items-center justify-center sm:justify-between gap-2">
             <div className="flex flex-col sm:flex-row items-center sm:gap-7 gap-3">
               <div className="flex items-center gap-2">
-                <Phone size={20} color="#b61c1c" />
+                <Phone size={20} />
                 <Link href="tel:3225875128">
                   <p>3225875128</p>
                 </Link>
               </div>
               <div className="flex items-center gap-2">
-                <Mail color="#b61c1c" size={20} />
+                <Mail size={20} />
                 <Link href={"mailto:unidotacionesdelcaribe@gmail.com"}>
                   <p>unidotacionesdelcaribe@gmail.com</p>
                 </Link>
@@ -126,7 +113,7 @@ const Nav = () => {
                 target="_blank"
                 className="flex items-center gap-2"
               >
-                <Instagram color="#b61c1c" size={20} />
+                <Instagram size={20} />
                 <p>unidotacionesdelcaribe</p>
               </Link>
             </div>
@@ -136,35 +123,34 @@ const Nav = () => {
           <div className="2xl:w-[90rem] xl:w-[75rem] w-auto mx-auto flex items-center justify-between">
             <Image
               src={Logo}
-              width={200}
-              height={200}
+              width={250}
+              height={250}
               alt="Logo de Unidotaciones del caribe"
               onClick={() => roter.push("/")}
-              className="cursor-pointer sm:w-80"
+              className="cursor-pointer"
             />
             <div className="hidden sm:flex items-center font-bold gap-10 text-md">
-              <Link href="/" className="text-primaryColor hover:text-[#b61c1c] transition-all delay-100">
+              <Link href="/" className="text-primaryColor hover:underline transition-all delay-100">
                 Inicio
               </Link>
-              <Link href="#" className="text-primaryColor hover:text-[#b61c1c] transition-all delay 100">
+              <Link href="#" className="text-primaryColor hover:underline transition-all delay 100">
                 Cotizaciones
               </Link>
               <Popover open={open} onOpenChange={setOpen}>
                 <PopoverTrigger asChild>
-                  <div className="flex items-center gap-1 cursor-pointer text-primaryColor hover:text-[#b61c1c] transition-all delay-100">
+                  <div className="flex items-center gap-1 cursor-pointer text-primaryColor hover:underline transition-all delay-100">
                     <p>Nuestros Productos</p>
                     <ChevronDown size={16} />
                   </div>
                 </PopoverTrigger>
                 <PopoverContent className="w-[240px] p-0">
                   <Command>
-                    <CommandInput placeholder="Buscar categoría..." />
                     <CommandList>
                       <CommandEmpty>No existe esa categoría.</CommandEmpty>
-                      <CommandGroup className="w-80 bg-[#1b629253]">
+                      <CommandGroup className="p-0 bg-[#1b629238]">
                         {categorias.map((categorias) => (
                           <CommandItem
-                          className="hover:bg-[#1b629253] font-bold text-gray-700"
+                            className="hover:bg-[#1b629253] cursor-pointer font-semibold px-4 text-black"
                             key={categorias.value}
                             value={categorias.value}
                             onSelect={(currentValue) => {
@@ -183,9 +169,9 @@ const Nav = () => {
                                   : "opacity-0 "
                               )}
                             />
-                            <p className="uppercase w-full cursor-pointer">
+                            <p className="w-full">
 
-                            {categorias.label}
+                              {categorias.label}
                             </p>
                           </CommandItem>
                         ))}

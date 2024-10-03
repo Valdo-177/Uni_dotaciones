@@ -1,4 +1,3 @@
-import { Category } from "@/src/models";
 import Link from "next/link";
 import React from "react";
 import Form from "../Form";

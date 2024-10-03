@@ -2,6 +2,9 @@ import img1 from "../assets/g9.svg"
 import img2 from "../assets/path25.svg"
 import img3 from "../assets/path17.svg"
 import { categoriasType, categoryCardType, TypesBeneficios } from "./models.types"
+import empresariales from "../assets/empresarial.png"
+import industrial from "../assets/Industrial.jpg"
+import otros from "../assets/otros.jpg"
 
 export const globalStyles = {
     container : "xl:w-[75rem] w-auto mx-auto"
@@ -64,15 +67,23 @@ export const Category: categoriasType[] = [
 
 export const CategoryCard: categoryCardType[] = [
     {
-        img: "Uniformes Empresariales",
+        img: empresariales.src,
         title: "Uniformes Empresariales",
     },
     {
-        img: "Uniformes Industriales",
+        img: industrial.src,
         title: "Uniformes Industriales",
     },
     {
-        img: "Otros",
+        img: otros.src,
         title: "Otros",
     },
+]
+
+export const ProductsExample:string[] = [
+    "Camisa Oxford Hombre",
+    "Camisa Oxford Mujer",
+    "Producto de prueba 3",
+    "Producto de prueba 4",
+    "Producto de prueba 5",
 ]

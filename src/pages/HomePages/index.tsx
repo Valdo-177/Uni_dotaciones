@@ -1,9 +1,8 @@
 import { Button } from "@/components/ui/button";
 import CardDescription from "@/src/components/CardDescription";
-import { categorias, CategoryCard, itemBeneficios } from "@/src/models";
+import { CategoryCard, itemBeneficios } from "@/src/models";
 import Image from "next/image";
 import React from "react";
-import fondoSection from "../../assets/fondoseccion1.png";
 import Link from "next/link";
 
 const HomePages = () => {
@@ -18,7 +17,7 @@ const HomePages = () => {
             <div className="w-full sm:space-y-1 text-3xl text-center sm:text-start">
               <h1 className="font-bold text-primaryColor sm:text-5xl  ">
                 Somos tu
-                
+
                 proveedor de <br /> <span className="text-[#b61c1c]">confianza</span>
               </h1>
             </div>
@@ -37,7 +36,7 @@ const HomePages = () => {
           </div>
         </div>
       </section>
-      <section className="bg-[#191919] text-black flex-col flex items-center rounded-[40px]">
+      <section className="bg-[#191919] text-black flex-col flex items-center">
         <div>
           <h2 className="text-center text-white text-2xl sm:text-3xl p-6 mb-[-20px]">
             ¿Por qué debes trabajar con nosostros?
@@ -49,15 +48,8 @@ const HomePages = () => {
           ))}
         </div>
       </section>
-      <section className="bg-white text-black relative flex flex-col sm:flex-row items-center justify-center h-[22rem]">
-        {/* <Image
-          src={fondoSection}
-          className="w-full h-full object-cover"
-          width={4000}
-          height={4000}
-          alt="Imagen de fondo de seccion"
-        /> */}
-        <div className="xl:w-[75rem] text-black w-full mx-auto p-4 py-6 h-[22rem] flex flex-col sm:flex-row items-center justify-between absolute top-0 font-semibold ">
+      <section className="bg-white text-black relative flex flex-col sm:flex-row items-center justify-center h-[15rem]">
+        <div className="xl:w-[75rem] text-black w-full mx-auto p-4 py-6 h-full flex flex-col sm:flex-row items-center justify-between absolute top-0 font-semibold ">
           <div className="text-center">
             <h3>NUESTRA MISIÓN</h3>
             <p className="font-extralight sm:w-[30rem]">
@@ -77,32 +69,29 @@ const HomePages = () => {
         </div>
       </section>
 
-      <section className=" text-black bg-[#F8F8F8] py-8 ">
-        <div className=" mx-auto gap-4 p-5 sm:p-0 my-8 flex flex-col justify-center items-center">
-          <h3 className=" uppercase text-2xl font-bold pb-8">
-            Nuestros productos
-          </h3>
+      <section className=" text-black ">
+        <div className="xl:w-[80rem] w-auto mx-auto gap-7 p-5 sm:p-0 my-8 flex flex-col items-center justify-center">
+          <h3 className='text-[#b61c1c] uppercase text-2xl font-bold'>Nuestros productos</h3>
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 bg-red-200 items-center justify-between  gap-9">
+          <div className="grid grid-cols-1 w-full sm:grid-cols-3 items-center justify-between  gap-9">
             {CategoryCard.map((item, index) => (
-              <Link
-                href={`/${item.title}`}
+              <div
                 key={index}
-                className="px-8 border-4 h-64 rounded-[40px] w-64 border-primaryColor cursor-pointer flex gap-2 items-center justify-between flex-col p-4"
+                className="relative sm:h-60 w-full h-[10rem] sm:w-[25rem] cursor-pointer bordercursor-pointer flex gap-2 items-center justify-center flex-col"
               >
-                {/* <Image
-                  src={fondoSection}
-                  alt={item.title}
-                  width={600}
-                  height={600}
-                /> */}
-
-                <h3 className=" text-sm font-bold">{item.title}</h3>
-
-                <Button className="hover:before:bg-redborder-red-500 relative hover:scale-105 p-4   overflow-hidden border  bg-[#b61c1c]  shadow-2xl transition-all delay-200 ease-in-out before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-primaryColor before:transition-all before:duration-500 hover:text-white hover:shadow-primaryColor hover:border-primaryColor hover:before:left-0 hover:before:w-full rounded-3xl text-sm font-bold ">
-              <span className="relative z-10"> Ver catálogo</span>
-            </Button>
-              </Link>
+                <Image
+                  className="w-[100%] h-[100%] object-cover"
+                  src={item.img}
+                  alt="hola"
+                  width={500}
+                  height={500}
+                />
+                <div className="h-full w-full bg-[#00000066] absolute z-10"/>
+                <div className="absolute z-20 flex flex-col gap-2 backdrop-blur-sm left-5 bottom-5 p-4 rounded-md bg-[#00000085] text-white">
+                <h3 className="text-[16px] sm:text-lg">{item.title}</h3>
+                <Link href={`/${item.title}`} className="bg-[#b61c1c] py-2 text-center text-sm sm:text-[1rem] rounded-[8px] px-4">Ver productos</Link>
+                </div>
+              </div>
             ))}
           </div>
         </div>

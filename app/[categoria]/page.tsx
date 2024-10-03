@@ -1,86 +1,60 @@
 "use client";
 
-import { globalStyles } from "@/src/models";
+import { globalStyles, ProductsExample } from "@/src/models";
 import Image from "next/image";
 import { useParams } from "next/navigation";
-import React from "react";
-import imagen from "../../src/assets/camisa-oxford-hombre.jpeg";
+import baner from "../../src/assets/empresarial-baner-removebg.png"
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
+import CardProducts from "@/src/components/CardProducts";
 
-const page = () => {
-  const { categoria } = useParams();
+
+const CategoryPage = () => {
+
+  // @ts-expect-error TS2614: Property 'Precios' is missing in type 'Product'.
+  const { categoria }: { categoria: string } = useParams()
+
 
   function desencriptarCadena(cadena: string) {
-    return decodeURIComponent(cadena.replace(/%20/g, ' '));
-}
+    return decodeURIComponent(cadena.replace(/%20/g, ' '));
+  }
+
   return (
     <section className="bg-[#F8F8F8] text-black p-4 py-10">
-      <h3 className=" uppercase text-2xl font-bold text-center py-10">
+      <h3 className=" uppercase sm:text-2xl text-xl font-bold text-center text-wrap py-10">
+        
         {desencriptarCadena(categoria)}
       </h3>
-      <div className={`${globalStyles.container} p-2 grid grid-cols-1 justify-items-center sm:grid-cols-3 gap-y-4`}>
-        <div className="w-[17rem] bg-white border flex flex-col items-center">
-          <div className="relative w-[17rem] h-[15rem]">
-            <Image
-              className="w-[100%] h-[100%] object-contain"
-              src={imagen}
-              alt="hola"
-              width={500}
-              height={500}
-            />
+      <div className={`flex flex-col sm:flex-row gap-4 sm:justify-between justify-center items-center ${globalStyles.container}`}>
+        <div className="bg-[#E0E0E0] sm:h-[43rem] sm:w-[21.3rem] w-full p-6 text-[#191C1F] flex flex-row sm:flex-col items-center justify-end shadow-sm rounded-[7.38px]">
+          <div className="flex flex-col gap-6 w-[15rem]">
+            <div>
+              <span className="hidden sm:block">Uniformes empresariales</span>
+              <h4 className="sm:text-2xl font-bold">Tenemos los
+                mejores precios</h4>
+              <span className="text-gray-600 text-sm sm:text-[1rem]">Mira mas de esta sección</span>
+            </div>
+            <Link href="" className="flex items-center gap-2 sm:p-4 p-2 justify-center bg-[#FBCB00] text-sm sm:text-[1rem] text-[#191C1F]">
+              ver más
+              <ArrowRight />
+            </Link>
           </div>
-          <div className="p-4 bg-primaryColor w-full">
-          <h4 className="font-medium text-center text-white">Camisa Oxford Hombre</h4>
-
-          </div>
+          <Image
+            className="sm:w-[80%] w-[10rem]"
+            src={baner}
+            alt="hola"
+            width={500}
+            height={500}
+          />
         </div>
-        <div className="w-[17rem] bg-white border flex flex-col items-center">
-          <div className="relative w-[17rem] h-[15rem]">
-            <Image
-              className="w-[100%] h-[100%] object-contain"
-              src={imagen}
-              alt="hola"
-              width={500}
-              height={500}
-            />
-          </div>
-          <div className="p-4 bg-primaryColor w-full">
-          <h4 className="font-medium text-center text-white">Camisa Oxford Hombre</h4>
-
-          </div>
-        </div>
-        <div className="w-[17rem] bg-white border flex flex-col items-center">
-          <div className="relative w-[17rem] h-[15rem]">
-            <Image
-              className="w-[100%] h-[100%] object-contain"
-              src={imagen}
-              alt="hola"
-              width={500}
-              height={500}
-            />
-          </div>
-          <div className="p-4 bg-primaryColor w-full">
-          <h4 className="font-medium text-center text-white">Camisa Oxford Hombre</h4>
-
-          </div>
-        </div>
-        <div className="w-[17rem] bg-white border flex flex-col items-center">
-          <div className="relative w-[17rem] h-[15rem]">
-            <Image
-              className="w-[100%] h-[100%] object-contain"
-              src={imagen}
-              alt="hola"
-              width={500}
-              height={500}
-            />
-          </div>
-          <div className="p-4 bg-primaryColor w-full">
-          <h4 className="font-medium text-center text-white">Camisa Oxford Hombre</h4>
-
-          </div>
+        <div className={`p-10 grid grid-cols-1 justify-items-center sm:grid-cols-3 gap-5 bg-white shadow-md rounded-[7.38px]`}>
+          {ProductsExample.map(item => (
+            <CardProducts key={item} item={item} />
+          ))}
         </div>
       </div>
     </section>
   );
 };
 
-export default page;
+export default CategoryPage;
