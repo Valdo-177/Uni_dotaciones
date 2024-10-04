@@ -13,7 +13,7 @@ const HomePages = () => {
         <div className="xl:w-[75rem] w-auto mx-auto h-[30rem] flex items-center justify-between">
           <div className="flex flex-col items-center gap-2 w-full sm:items-start">
             <span className="font-extralight text-start w-full text-sm text-[#b61c1c">
-              + 4 Años de Experiencia
+              +4 Años de Experiencia
             </span>
             <div className="w-full sm:space-y-1 text-3xl text-center sm:text-start">
               <h1 className="font-bold text-primaryColor sm:text-5xl  ">
