@@ -30,37 +30,37 @@ export const itemBeneficios: TypesBeneficios[] =[
 
 export const categorias: categoriasType[] = [
     {
-        value: "Uniformes empresariales",
-        label: "Uniformes empresariales",
+        value: "Dotación empresarial",
+        label: "Dotación empresarial",
     },
     {
-        value: "Uniformes industriales",
-        label: "Uniformes industriales",
+        value: "Elementos de protección personal",
+        label: "Elementos de protección personal",
     },
     {
-        value: "Otros",
-        label: "Otros",
+        value: "Calzado industrial",
+        label: "Calzado industrial",
     },
 ]
 
 export const categoriasProduct: string[] = [
-    "Uniformes empresariales",
-    "Uniformes industriales",
-    "Otros",
+    "Dotación empresarial",
+    "Elementos de protección personal",
+    "Calzado industrial",
 ]
 
 export const Category: categoriasType[] = [
     {
-        value: "Uniformes empresariales",
-        label: "Uniformes empresariales",
+        value: "Dotación empresarial",
+        label: "Dotación empresarial",
     },
     {
-        value: "Uniformes industriales",
-        label: "Uniformes industriales",
+        value: "Elementos de protección personal",
+        label: "Elementos de protección personal",
     },
     {
-        value: "Otros",
-        label: "Otros",
+        value: "Calzado industrial",
+        label: "Calzado industrial",
     },
    
 ]
@@ -68,15 +68,15 @@ export const Category: categoriasType[] = [
 export const CategoryCard: categoryCardType[] = [
     {
         img: empresariales.src,
-        title: "Uniformes Empresariales",
+        title: "Dotación empresarial",
     },
     {
         img: industrial.src,
-        title: "Uniformes Industriales",
+        title: "Elementos de protección personal",
     },
     {
         img: otros.src,
-        title: "Otros",
+        title: "Calzado industrial",
     },
 ]
 

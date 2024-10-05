@@ -70,14 +70,14 @@ const HomePages = () => {
       </section>
 
       <section className=" text-black ">
-        <div className="xl:w-[80rem] w-auto mx-auto gap-7 p-5 sm:p-0 my-8 flex flex-col items-center justify-center">
+        <div className="xl:w-[75rem] w-auto mx-auto gap-7 p-5 sm:p-0 my-8 flex flex-col items-center justify-center">
           <h3 className='text-[#b61c1c] uppercase text-2xl font-bold'>Nuestros productos</h3>
 
-          <div className="grid grid-cols-1 w-full sm:grid-cols-3 items-center justify-between  gap-9">
+          <div className="grid grid-cols-1 w-full sm:grid-cols-3 items-center justify-items-center  gap-9">
             {CategoryCard.map((item, index) => (
               <div
                 key={index}
-                className="relative sm:h-60 w-full h-[10rem] sm:w-[25rem] cursor-pointer bordercursor-pointer flex gap-2 items-center justify-center flex-col"
+                className="relative sm:h-60 w-full h-[10rem] sm:w-[23rem] cursor-pointer bordercursor-pointer flex gap-2 items-center justify-center flex-col"
               >
                 <Image
                   className="w-[100%] h-[100%] object-cover"

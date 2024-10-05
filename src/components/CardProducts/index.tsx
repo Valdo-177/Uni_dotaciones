@@ -1,5 +1,4 @@
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
-import imagen from "../../assets/camisa-oxford-hombre.jpeg";
 import Image from 'next/image';
 import {
     AlertDialog,
@@ -15,7 +14,14 @@ import {
 
 
 interface CardProductsTypes {
-    item: string;
+    item: {
+        Nombre: string;
+        categoria: string;
+        colores: string[];
+        descripcion: string;
+        imagen: string;
+        tallas: string[];
+    };
 }
 
 const CardProducts = ({ item }: CardProductsTypes) => {
@@ -34,28 +40,28 @@ const CardProducts = ({ item }: CardProductsTypes) => {
     return (
         <AlertDialog>
             <AlertDialogTrigger asChild>
-                <div className="cursor-pointer hover:shadow-md pt-5 w-[15rem] bg-white flex flex-col items-center gap-3" onClick={() => handleParams(item)}>
+                <div className="cursor-pointer hover:shadow-md pt-5 w-[15rem] bg-white flex flex-col items-center gap-3" onClick={() => handleParams(item.Nombre)}>
                     <div className="relative w-[15rem] h-[13rem]">
                         <Image
                             className="w-[100%] h-[100%] object-contain"
-                            src={imagen}
+                            src={item.imagen}
                             alt="hola"
                             width={500}
                             height={500}
                         />
                     </div>
                     <div className="p-4 bg-primaryColor w-full">
-                        <h4 className="font-medium text-center text-white">{item}</h4>
+                        <h4 className="font-medium text-center text-white">{item.Nombre}</h4>
 
                     </div>
                 </div>
             </AlertDialogTrigger>
-            <AlertDialogContent className='max-w-[75rem]'>
+            <AlertDialogContent className='max-w-[75rem] h-[40rem] overflow-y-scroll'>
                 <AlertDialogHeader>
                     <div className='flex gap-9 items-center flex-col sm:flex-row'>
                         <Image
-                            className="sm:w-[40rem] sm:h-[40rem] w-[16rem] h-[16rem] object-contain"
-                            src={imagen}
+                            className="sm:w-[30rem] sm:h-[30rem] w-[16rem] h-[16rem] object-contain"
+                            src={item.imagen}
                             alt="hola"
                             width={500}
                             height={500}

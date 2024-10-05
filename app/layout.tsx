@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     description: "Uni Dotaciones del Caribe",
     type: "website",
     images: {
-      url: "https://firebasestorage.googleapis.com/v0/b/fb-picporter.appspot.com/o/HADA%2FPreviewUnidotaciones.png?alt=media&token=a9f9b4ef-e675-4e4a-bee2-ab24cdd9c106",
+      url: "https://firebasestorage.googleapis.com/v0/b/fb-picporter.appspot.com/o/HADA%2FPreviewUnidotaciones.png?alt=media&token=365a2ba0-e80a-49c9-a289-78287678dee3",
       width: "1200",
       height: "630",
       alt: "Imagen descriptinva de la web",
