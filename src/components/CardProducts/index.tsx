@@ -29,7 +29,7 @@ const CardProducts = ({ item }: CardProductsTypes) => {
     const pathNAme = usePathname()
     const { replace, push } = useRouter()
     const nameProduct = searchParams?.get("product")
-// @ts-expect-error TS2614: Property 'Precios' is missing in type 'Product'.
+    // @ts-expect-error TS2614: Property 'Precios' is missing in type 'Product'.
     const params = new URLSearchParams(searchParams)
 
     const handleParams = (item: string) => {
@@ -40,8 +40,8 @@ const CardProducts = ({ item }: CardProductsTypes) => {
     return (
         <AlertDialog>
             <AlertDialogTrigger asChild>
-                <div className="cursor-pointer hover:shadow-md pt-5 w-[15rem] bg-white flex flex-col items-center gap-3" onClick={() => handleParams(item.Nombre)}>
-                    <div className="relative w-[15rem] h-[13rem]">
+                <div className="cursor-pointer hover:shadow-md pt-5 w-full bg-white flex flex-col items-center gap-3" onClick={() => handleParams(item.Nombre)}>
+                    <div className="relative w-[15rem] h-full">
                         <Image
                             className="w-[100%] h-[100%] object-contain"
                             src={item.imagen}
@@ -67,24 +67,23 @@ const CardProducts = ({ item }: CardProductsTypes) => {
                             height={500}
                         />
                         <div className='w-full sm:w-[40rem] flex flex-col items-start'>
-                            <AlertDialogTitle className='text-2xl mb-5'>{nameProduct}</AlertDialogTitle>
+                            <AlertDialogTitle className='text-2xl mb-5'>{item.Nombre}</AlertDialogTitle>
                             <span className='text-lg font-semibold'>Description:</span>
                             <AlertDialogDescription className='w-full sm:w-[80%] text-start'>
-                                This action cannot be undone. This will permanently delete your
-                                account and remove your data from our servers.
+                                {item.descripcion}
                             </AlertDialogDescription>
                             <span className='text-lg font-semibold'>Colores:</span>
-                            <div className='flex items-center gap-2'>
-                                {["#da0505", "#232323", "#262"].map(item => (
-                                    <div
-                                        key={item}
-                                        className="h-7 w-7 cursor-pointer"
-                                        style={{ borderRadius: '50%', background: item }}
-                                    />
-                                ))}
-                            </div>
+                            <AlertDialogDescription className='w-full sm:w-[80%] text-start'>
+                                Preguntar a un asesor
+                            </AlertDialogDescription>
                             <span className='text-lg font-semibold'>Tallas disponibles:</span>
-                            <div className='flex items-center gap-2'>
+                            {['Calzado industrial', 'Elementos de protección personal'].includes(item.categoria)  ? <div className='flex items-center gap-2'>
+                                    <div
+                                        className="cursor-pointer bg-slate-300 rounded-sm px-4 py-2"
+                                    >
+                                        Talla única
+                                    </div>
+                            </div> : <div className='flex items-center gap-2'>
                                 {["S", "M", "L", "XL", "XXL"].map(item => (
                                     <div
                                         key={item}
@@ -93,7 +92,7 @@ const CardProducts = ({ item }: CardProductsTypes) => {
                                         {item}
                                     </div>
                                 ))}
-                            </div>
+                            </div>}
                         </div>
                     </div>
                 </AlertDialogHeader>
